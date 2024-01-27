@@ -1,6 +1,7 @@
 {
   "name": "star-wars-app",
   "version": "0.1.0",
+  "homepage": "https://seazzard.github.io/StarWarsApp/",
   "private": true,
   "dependencies": {
     "classnames": "^2.5.1",
