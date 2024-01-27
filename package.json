@@ -18,12 +18,13 @@
     "redux-thunk": "^3.1.0"
   },
   "scripts": {
+    "deploy": "npm run build && npm run build-storybook && npm run build-gh-pages",
+    "build-storybook": "build-storybook -o ./build/storybook",
+    "deploy-storybook": "storybook-to-ghpages",
     "start": "react-app-rewired start",
-    "deploy": "npm run build && npm run build-gh-pages",
     "build": "react-app-rewired build",
     "eject": "react-scripts eject",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "storybook": "storybook dev -p 6006 -s public",
     "build-gh-pages": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -54,6 +55,7 @@
     "@storybook/preset-create-react-app": "^7.6.8",
     "@storybook/react": "^7.6.8",
     "@storybook/react-webpack5": "^7.6.8",
+    "@storybook/storybook-deployer": "^2.8.16",
     "@storybook/test": "^7.6.8",
     "eslint-plugin-storybook": "^0.6.15",
     "gh-pages": "^6.1.1",
